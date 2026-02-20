@@ -8,6 +8,7 @@ import adminRouter from "./routes/adminRoutes.js";
 import technicianRouter from "./routes/technicianRoutes.js";
 import serviceRoute from "./routes/serviceRoute.js";
 import cookieParser from "cookie-parser";
+import paymentRoutes from "./routes/paymentRoutes.js";
 
 dotenv.config();
 connectDB();
@@ -29,6 +30,7 @@ app.use("/api/user",userRouter);
 app.use("/api/admin",adminRouter);
 app.use("/api/technician",technicianRouter);
 app.use("/api/services",serviceRoute);
+app.use("/api/payment", paymentRoutes);
 
 app.get("/", (req, res) => {
   res.send("API running");
