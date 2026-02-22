@@ -1,0 +1,56 @@
+.tech-container {
+  padding: 40px;
+  background: #f4f6f9;
+  min-height: 100vh;
+}
+
+.tech-title {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.tech-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.tech-table th,
+.tech-table td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.tech-table th {
+  background: #2c3e50;
+  color: white;
+}
+
+.update-btn {
+  padding: 8px 15px;
+  border: none;
+  background: #2c3e50;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.update-btn:hover {
+  background: #1a252f;
+}
+
+.completed {
+  color: green;
+  font-weight: bold;
+}
+
+.pending {
+  color: orange;
+}
+
+.in-progress {
+  color: blue;
+}
