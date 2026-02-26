@@ -48,6 +48,7 @@ function TechnicianDashboard() {
 
   return (
     <div className="tech-container">
+      <NavBar/>
       <h2 className="tech-title">My Jobs</h2>
 
       <table className="tech-table">
