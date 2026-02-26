@@ -19,8 +19,8 @@ function Navbar() {
     switch (user.role) {
       case "admin":
         return "Users";
-      // case "technician":
-      //   return "Services";
+      case "technician";
+        return "";
       case "user":
       default:
         return "My Orders";
