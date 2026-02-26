@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "../../api/axios";
 import "../../style/Technician.css";
+import Navbar from "../../components/Navbar";
 
 function TechnicianDashboard() {
   const [services, setServices] = useState([]);
@@ -47,7 +48,9 @@ function TechnicianDashboard() {
   
 
   return (
+    
     <div className="tech-container">
+      <Navbar />
       <h2 className="tech-title">My Jobs</h2>
 
       <table className="tech-table">
