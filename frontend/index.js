@@ -16,7 +16,7 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://main-project-entri-frontend-1.onrender.com",
   credentials: true
 }));
 
