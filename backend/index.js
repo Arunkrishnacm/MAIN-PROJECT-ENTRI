@@ -16,7 +16,8 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: ["https://main-project-entri-frontend-1.onrender.com"],
+  origin: "https://main-project-entri-frontend-1.onrender.com",
+  methods: ["GET","POST","PUT","DELETE"],
   credentials: true
 }));
 
