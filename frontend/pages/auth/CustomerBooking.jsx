@@ -105,7 +105,7 @@ function CustomerBooking() {
               }
 
               // Verify payment on backend
-              await axios.post("/payment/verify-payment", {
+              await axios.post("/api/payment/verify-payment", {
                 razorpay_order_id: response.razorpay_order_id,
                 razorpay_payment_id: response.razorpay_payment_id,
                 razorpay_signature: response.razorpay_signature,
