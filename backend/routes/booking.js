@@ -1,5 +1,5 @@
 
-const router = require('express').Router();
+const router = express.Router();
 const { verifyToken } = require('../middleWare/authMiddleware');
 const { authorizeRoles } = require('../middleWare/roleMiddleware');
 const { createBooking, getUserBookings } = require('../controllers/bookingController');
