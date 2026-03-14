@@ -6,7 +6,7 @@ import { createService, } from "../controllers/serviceController.js";
 const router = express.Router();
 
 router.post("/create",verifyToken,authorizeRoles("user"),createService);
-
+router.post("/booking",verifyToken,authorizeRoles("user"),createService);
 
 
 export default router;
