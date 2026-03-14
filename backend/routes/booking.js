@@ -6,4 +6,4 @@ const { createBooking, getUserBookings } = require('../controllers/bookingContro
 
 router.post('/create', verifyToken, authorizeRoles('user'), createBooking);
 router.get('/bookings', verifyToken, authorizeRoles('user'), getUserBookings);
-module.exports = router;
+export default router;
