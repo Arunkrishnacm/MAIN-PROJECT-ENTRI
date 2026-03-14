@@ -76,7 +76,7 @@ function CustomerBooking() {
     try {
       // Create order from backend
       const { data } = await axios.post(
-        "/payment/create-order",
+        "/api/payment/create-order",
         { amount: form.price }
       );
 
