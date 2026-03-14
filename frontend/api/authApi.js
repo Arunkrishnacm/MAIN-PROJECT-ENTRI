@@ -29,7 +29,7 @@ export const logout = async () => {
 
 export const CustomerBooking = async (bookingData) => {
   try {
-    const response = await axios.post('/services/create', bookingData); 
+    const response = await axios.post('/api/services/create', bookingData); 
     return response.data;
   } catch (error) {
     throw error.response ? error.response.data : new Error('Network error');
