@@ -75,10 +75,12 @@ export const login = async (req, res) => {
             { expiresIn: "1d" }
         );
 
-        res.cookie("token", token, {
-            httpOnly: true,
-            sameSite: "lax"
-        });
+     res.cookie("token", token, {
+  httpOnly: true,
+  secure: true,
+  sameSite: "none",
+  maxAge: 24 * 60 * 60 * 1000
+});;
 
         return res.status(200).json({
             message: "Login successful",
