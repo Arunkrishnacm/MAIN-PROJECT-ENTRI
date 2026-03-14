@@ -28,29 +28,23 @@ function Login() {
       }
     } catch (err) {
       console.error(err);
-      const message =
-    err.response?.data?.message ||
-    err.response?.data ||
-    err.message ||
-    "Please try again";
-
-  alert("Login failed: " + message);
+      alert("Login failed: " + (err.message || "Please try again"));
     }
   };
 
   return (
     <div className="container">
-      <form className="login-box" autoComplete="off" onSubmit={handleSubmit}>
+      <form className="login-box"  onSubmit={handleSubmit}>
         <h2>Login</h2>
 
         <div className="input-group">
-          <input type="email" name="email" required />
-          <label>Email</label>
+          <input id="email" type="email" name="email" autoComplete="email" required />
+          <label htmlFor="email">Email</label>
         </div>
 
         <div className="input-group">
-          <input type="password" name="password" required />
-          <label>Password</label>
+          <input id="password" type="password" name="password" autoComplete="current-password" required />
+          <label htmlFor="password">Password</label>
         </div>
 
         <button type="submit">Login</button>
