@@ -27,9 +27,13 @@ function Login() {
         navigate("/home");
       }
     } catch (err) {
-      console.error(err);
-      alert("Login failed: " + (err.message || "Please try again"));
-    }
+  const message =
+    err.response?.data?.message ||
+    err.message ||
+    "Please try again";
+
+  alert("Login failed: " + message);
+}
   };
 
   return (
