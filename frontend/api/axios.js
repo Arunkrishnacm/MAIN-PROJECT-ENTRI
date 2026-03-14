@@ -4,14 +4,6 @@ const instance = axios.create({
   baseURL: "https://main-project-entri-backend.onrender.com/api",
 });
 
-instance.interceptors.request.use((config) => {
-  const token = localStorage.getItem("token");
-
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
-
-  return config;
-});
+;
 
 export default instance;
