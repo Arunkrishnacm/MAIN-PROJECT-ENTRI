@@ -14,11 +14,11 @@ function AdminDashbord() {
       try {
         const token = localStorage.getItem("token");
 
-        const servicesResponse = await axios.get('/admin/services', {
+        const servicesResponse = await axios.get('/api/admin/services', {
           headers: { Authorization: `Bearer ${token}` }
         });
 
-        const usersResponse = await axios.get('/admin/users', {
+        const usersResponse = await axios.get('/api/admin/users', {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -41,7 +41,7 @@ function AdminDashbord() {
     if (!techId) return alert('Please select a technician');
     try {
       const token = localStorage.getItem('token');
-      await axios.put(`/admin/assign-service/${serviceId}`, { technicianId: techId }, {
+      await axios.put(`/api/admin/assign-service/${serviceId}`, { technicianId: techId }, {
         headers: { Authorization: `Bearer ${token}` }
       });
       // Update local state
