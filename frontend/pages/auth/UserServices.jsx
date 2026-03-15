@@ -20,7 +20,7 @@ function UserServices() {
             }
 
             try {
-                const response = await axios.get('/user/my-services', {
+                const response = await axios.get('/api/user/my-services', {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
