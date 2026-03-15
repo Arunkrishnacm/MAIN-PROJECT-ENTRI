@@ -10,7 +10,7 @@ function TechnicianDashboard() {
     const fetchServices = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("/technician/assigned-services", {
+        const response = await axios.get("/api/technician/assigned-services", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -29,13 +29,13 @@ function TechnicianDashboard() {
     try {
       const token = localStorage.getItem("token");
       // Update status to 'completed' (adjust as needed)
-      await axios.put(`/technician/update-service-status/${serviceId}`, { status: 'completed' }, {
+      await axios.put(`/api/technician/update-service-status/${serviceId}`, { status: 'completed' }, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
       // Refresh the services list after updating status
-      const response = await axios.get("/technician/assigned-services", {
+      const response = await axios.get("/api/technician/assigned-services", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
